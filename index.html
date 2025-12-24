@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Subut SMP | Store</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subut SMP Store</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; font-family: 'Cairo', sans-serif; }
-    body { margin: 0; background: #0b0f1a; color: #fff; }
+    * { box-sizing: border-box; font-family: 'Cairo', sans-serif; margin:0; padding:0; }
+    body { background: #0b0f1a; color: #fff; }
 
     /* Header */
-    header { background: linear-gradient(135deg,#5b2cff,#8f5bff); padding: 40px 20px; text-align: center; position: relative; }
-    header h1 { font-size: 48px; margin: 0; }
-    header p { font-size: 18px; opacity: .9; margin-top: 8px; }
+    header { background: linear-gradient(135deg,#5b2cff,#8f5bff); padding: 50px 20px; text-align: center; position: relative; }
+    header h1 { font-size: 52px; margin-bottom: 10px; }
+    header p { font-size: 20px; opacity: .9; }
 
-    /* Navigation Buttons */
-    .top-buttons { margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+    /* Top Buttons */
+    .top-buttons { margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
     .top-buttons button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
-      cursor: pointer;
-      background: #6c4cff;
-      color: #fff;
-      transition: 0.3s;
+      padding: 12px 25px; border: none; border-radius: 12px; font-size: 17px;
+      cursor: pointer; background: #6c4cff; color: #fff; transition: 0.3s; font-weight: bold;
     }
     .top-buttons button:hover { background: #8a6cff; }
 
     /* IP Box */
-    .ip-box { margin-top: 20px; background: rgba(0,0,0,.3); display: inline-block; padding: 10px 20px; border-radius: 8px; }
+    .ip-box { margin-top: 20px; background: rgba(0,0,0,0.25); display: inline-block; padding: 12px 25px; border-radius: 10px; font-size: 18px; font-weight: bold; }
 
     /* Section */
     section { padding: 60px 20px; max-width: 1200px; margin: auto; }
-    .ranks { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 25px; }
+    section h2 { text-align: center; font-size: 36px; margin-bottom: 40px; }
+
+    /* Ranks Grid */
+    .ranks { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 30px; }
 
     /* Rank Card */
-    .rank { background: #13182b; border-radius: 16px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,.4); transition: .3s; }
-    .rank:hover { transform: translateY(-6px); }
-    .rank h3 { margin-top: 0; font-size: 26px; }
-    .price { font-size: 22px; font-weight: 800; color: #7cff7c; margin-bottom: 15px; }
-    ul { padding-right: 18px; margin-bottom: 20px; }
-    .rank button { width: 100%; padding: 14px; border-radius: 10px; border: none; background: #6c4cff; color: #fff; font-size: 16px; cursor: pointer; transition: 0.3s; }
-    .rank button:hover { background: #8a6cff; }
+    .rank { background: #13182b; border-radius: 20px; padding: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.5); position: relative; transition: 0.3s; overflow: hidden; }
+    .rank:hover { transform: translateY(-8px); }
+    .rank h3 { font-size: 28px; margin-bottom: 10px; text-align: center; }
+    .rank .price { font-size: 24px; font-weight: 800; color: #7cff7c; text-align: center; margin-bottom: 15px; }
+    .rank ul { list-style: none; padding-right: 0; margin-bottom: 20px; }
+    .rank ul li { padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 16px; }
+    .rank button { width: 100%; padding: 15px; border-radius: 12px; border: none; font-size: 17px; cursor: pointer; font-weight: bold; background: linear-gradient(90deg,#5b2cff,#8f5bff); color: #fff; transition: 0.3s; }
+    .rank button:hover { background: linear-gradient(90deg,#8f5bff,#5b2cff); }
 
     /* Footer */
-    footer { text-align: center; padding: 30px; background: #0a0d18; opacity: .7; margin-top: 50px; }
+    footer { text-align: center; padding: 35px; background: #0a0d18; opacity: .8; margin-top: 60px; font-size: 15px; }
+
+    /* Rank Colors */
+    .mvp { border-top: 4px solid #4fc3f7; }
+    .immortal { border-top: 4px solid #ff9800; }
+    .subut { border-top: 4px solid #ff5252; }
+
   </style>
 </head>
 <body>
@@ -56,8 +60,8 @@
 
   <!-- Top Buttons -->
   <div class="top-buttons">
-    <button onclick="window.open('https://discord.gg/Qx2QxhHv', '_blank')">ديسكورد</button>
-    <button onclick="document.getElementById('ranks-section').scrollIntoView({behavior: 'smooth'})">الرانكات</button>
+    <button onclick="window.open('https://discord.gg/Qx2QxhHv','_blank')">Discord</button>
+    <button onclick="document.getElementById('ranks-section').scrollIntoView({behavior:'smooth'})">الرانكات</button>
     <button onclick="alert('IP السيرفر: subutsmp.xyz')">IP السيرفر</button>
   </div>
 
@@ -65,11 +69,11 @@
 </header>
 
 <section id="ranks-section">
-  <h2 style="text-align:center">الرانكات</h2>
+  <h2>الرانكات</h2>
   <div class="ranks">
 
     <!-- MVP -->
-    <div class="rank">
+    <div class="rank mvp">
       <h3>MVP</h3>
       <p class="price">2$</p>
       <ul>
@@ -81,7 +85,7 @@
     </div>
 
     <!-- IMMORTAL -->
-    <div class="rank">
+    <div class="rank immortal">
       <h3>IMMORTAL</h3>
       <p class="price">10$</p>
       <ul>
@@ -95,7 +99,7 @@
     </div>
 
     <!-- +SUBUT -->
-    <div class="rank">
+    <div class="rank subut">
       <h3>+SUBUT</h3>
       <p class="price">15$</p>
       <ul>
@@ -121,7 +125,7 @@
 
 <script>
   function buy(rank) {
-    window.open('https://discord.gg/Qx2QxhHv', '_blank');
+    window.open('https://discord.gg/Qx2QxhHv','_blank');
   }
 </script>
 
