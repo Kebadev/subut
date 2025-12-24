@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subut SMP | Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+    body { margin: 0; background: #0b0f1a; color: #fff; }
+    header { background: linear-gradient(135deg,#5b2cff,#8f5bff); padding: 60px 20px; text-align: center; }
+    header h1 { font-size: 48px; margin: 0; }
+    header p { font-size: 18px; opacity: .9; }
+    .ip-box { margin-top: 20px; background: rgba(0,0,0,.3); display: inline-block; padding: 10px 20px; border-radius: 8px; }
+    section { padding: 60px 20px; max-width: 1200px; margin: auto; }
+    .ranks { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 25px; }
+    .rank { background: #13182b; border-radius: 16px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,.4); transition: .3s; }
+    .rank:hover { transform: translateY(-6px); }
+    .rank h3 { margin-top: 0; font-size: 26px; }
+    .price { font-size: 22px; font-weight: 800; color: #7cff7c; }
+    ul { padding-right: 18px; }
+    button { width: 100%; padding: 14px; border-radius: 10px; border: none; background: #6c4cff; color: #fff; font-size: 16px; cursor: pointer; }
+    button:hover { background: #8a6cff; }
+    footer { text-align: center; padding: 30px; background: #0a0d18; opacity: .7; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Subut SMP</h1>
+  <p>المتجر الرسمي لسيرفر سوبوت</p>
+  <div class="ip-box">IP: subutsmp.xyz</div>
+</header>
+
+<section>
+  <h2 style="text-align:center">الرانكات</h2>
+  <div class="ranks">
+
+    <div class="rank">
+      <h3>VIP</h3>
+      <p class="price">5$</p>
+      <ul>
+        <li>Fly</li>
+        <li>Kit VIP</li>
+        <li>5 Homes</li>
+      </ul>
+      <button onclick="buy('VIP')">شراء</button>
+    </div>
+
+    <div class="rank">
+      <h3>MVP</h3>
+      <p class="price">10$</p>
+      <ul>
+        <li>Fly</li>
+        <li>Kit MVP</li>
+        <li>10 Homes</li>
+      </ul>
+      <button onclick="buy('MVP')">شراء</button>
+    </div>
+
+    <div class="rank">
+      <h3>LEGEND</h3>
+      <p class="price">20$</p>
+      <ul>
+        <li>كل المميزات</li>
+        <li>Prefix خاص</li>
+        <li>Unlimited Homes</li>
+      </ul>
+      <button onclick="buy('LEGEND')">شراء</button>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2025 Subut SMP — All Rights Reserved
+</footer>
+
+<script>
+  function buy(rank) {
+    window.location.href = "https://discord.gg/YOURSERVER";
+  }
+</script>
+
+</body>
+</html>
