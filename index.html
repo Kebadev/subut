@@ -34,12 +34,14 @@
     /* Section */
     section { padding: 60px 20px; max-width: 1200px; margin: auto; }
     .ranks { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 25px; }
+
+    /* Rank Card */
     .rank { background: #13182b; border-radius: 16px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,.4); transition: .3s; }
     .rank:hover { transform: translateY(-6px); }
     .rank h3 { margin-top: 0; font-size: 26px; }
-    .price { font-size: 22px; font-weight: 800; color: #7cff7c; }
-    ul { padding-right: 18px; }
-    .rank button { width: 100%; padding: 14px; border-radius: 10px; border: none; background: #6c4cff; color: #fff; font-size: 16px; cursor: pointer; }
+    .price { font-size: 22px; font-weight: 800; color: #7cff7c; margin-bottom: 15px; }
+    ul { padding-right: 18px; margin-bottom: 20px; }
+    .rank button { width: 100%; padding: 14px; border-radius: 10px; border: none; background: #6c4cff; color: #fff; font-size: 16px; cursor: pointer; transition: 0.3s; }
     .rank button:hover { background: #8a6cff; }
 
     /* Footer */
@@ -54,7 +56,7 @@
 
   <!-- Top Buttons -->
   <div class="top-buttons">
-    <button onclick="window.open('https://discord.gg/YOUR_DISCORD_LINK', '_blank')">ديسكورد</button>
+    <button onclick="window.open('https://discord.gg/Qx2QxhHv', '_blank')">ديسكورد</button>
     <button onclick="document.getElementById('ranks-section').scrollIntoView({behavior: 'smooth'})">الرانكات</button>
     <button onclick="alert('IP السيرفر: subutsmp.xyz')">IP السيرفر</button>
   </div>
@@ -66,37 +68,48 @@
   <h2 style="text-align:center">الرانكات</h2>
   <div class="ranks">
 
-    <div class="rank">
-      <h3>VIP</h3>
-      <p class="price">5$</p>
-      <ul>
-        <li>Fly</li>
-        <li>Kit VIP</li>
-        <li>5 Homes</li>
-      </ul>
-      <button onclick="buy('VIP')">شراء</button>
-    </div>
-
+    <!-- MVP -->
     <div class="rank">
       <h3>MVP</h3>
-      <p class="price">10$</p>
+      <p class="price">2$</p>
       <ul>
-        <li>Fly</li>
-        <li>Kit MVP</li>
-        <li>10 Homes</li>
+        <li>شكل حلو</li>
+        <li>كت في ماينكرافت</li>
+        <li>أمر /hide</li>
       </ul>
       <button onclick="buy('MVP')">شراء</button>
     </div>
 
+    <!-- IMMORTAL -->
     <div class="rank">
-      <h3>LEGEND</h3>
-      <p class="price">20$</p>
+      <h3>IMMORTAL</h3>
+      <p class="price">10$</p>
       <ul>
-        <li>كل المميزات</li>
-        <li>Prefix خاص</li>
-        <li>Unlimited Homes</li>
+        <li>شكل حلو ومميز</li>
+        <li>كت مطور</li>
+        <li>أمر /hide</li>
+        <li>أمر /hat</li>
+        <li>أمر /bal</li>
       </ul>
-      <button onclick="buy('LEGEND')">شراء</button>
+      <button onclick="buy('IMMORTAL')">شراء</button>
+    </div>
+
+    <!-- +SUBUT -->
+    <div class="rank">
+      <h3>+SUBUT</h3>
+      <p class="price">15$</p>
+      <ul>
+        <li>رتبة شكلها فنان وأفضل رتبة</li>
+        <li>كل كيتات سابقة</li>
+        <li>أمر /hide</li>
+        <li>أمر /bal</li>
+        <li>أمر /hat</li>
+        <li>أمر /anvil</li>
+        <li>أمر /grindstone</li>
+        <li>أمر /workbench</li>
+        <li>خصائص إضافية</li>
+      </ul>
+      <button onclick="buy('+SUBUT')">شراء</button>
     </div>
 
   </div>
@@ -108,7 +121,7 @@
 
 <script>
   function buy(rank) {
-    window.open('https://discord.gg/YOUR_DISCORD_LINK', '_blank');
+    window.open('https://discord.gg/Qx2QxhHv', '_blank');
   }
 </script>
 
